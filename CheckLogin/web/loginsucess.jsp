@@ -36,7 +36,24 @@
             </div>
         </div>
         <div>
-            <h1>le xuan nam</h1>
+            <ol class="breadcrumb">
+                <li>
+                    <span>
+                        <a>Home</a>&nbsp;|&nbsp;<b>View Schedule</b>
+                    </span>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h1>Activities for <span>NamLXHE153241 (Lê Xuân Nam)</span></h1>
+            <h2 class="sc">Note: These activities do not include extra-curriculum activities, such as club activities ...
+                <br>Chú thích: Các hoạt động trong bảng dưới không bao gồm hoạt động ngoại khóa, ví dụ như hoạt động câu lạc bộ ...</h2>
+            <h3 class="thr">Các phòng bắt đầu bằng AL thuộc tòa nhà Alpha. VD: AL...<br>
+                Các phòng bắt đầu bằng BE thuộc tòa nhà Beta. VD: BE,..<br>
+                Các phòng bắt đầu bằng G thuộc tòa nhà Gamma. VD: G201,...<br>
+                Các phòng tập bằng đầu bằng R thuộc khu vực sân tập Vovinam.<br>
+                Các phòng bắt đầu bằng DE thuộc tòa nhà Delta. VD: DE,..<br>
+                Little UK (LUK) thuộc tầng 5 tòa nhà Delta</h3>
         </div>
     </body>
 </html>
