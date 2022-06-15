@@ -1,0 +1,34 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 15-06-2022, 13:50:51
+    Author     : asus
+*/
+
+.first{
+    overflow-x: hidden;
+}
+.text{
+    position: absolute;
+    color: #368664;
+}
+.a1{
+    margin-left: 70px;
+    width: 300px;
+    height: 150px;
+}
+.text1{
+    font-size: 20px;
+    margin-left: 30px;
+    color: #368664;
+}
+.app{
+    width: 150px;
+    height: 41px;
+}
+.ch{
+    width: 150px;
+    height: 41px;
+}

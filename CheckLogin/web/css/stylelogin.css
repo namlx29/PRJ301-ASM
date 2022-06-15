@@ -6,28 +6,54 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Created on : 15-06-2022, 12:17:30
     Author     : asus
 */
+
 .logo{
+    
     height: 100px;
     width: 200px;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
 }
 .anhlogin{
+    width: 100%;
+    height: 770px;
+} 
+.text{
+    margin-top: 300px;
+    margin-left: 580px;
+    position: absolute;
+    opacity: 0.8;
+}
+.h1{
     
+    width: 400px;
+    height: 180px;
+    border: 5px solid black;
+    background-color: #ffffcc;
+
 }
 .us{
+    margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 .pw{
+    margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 .sb{
-     margin-top: 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 180px;
+    text-align: center;
+    background: #ffffcc;
 }
 .rs{
-     margin-top: 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 180px;
+    background: #ffffcc;
 }
