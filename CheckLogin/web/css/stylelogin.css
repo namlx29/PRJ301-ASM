@@ -1,0 +1,33 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 15-06-2022, 12:17:30
+    Author     : asus
+*/
+.logo{
+    height: 100px;
+    width: 200px;
+}
+.anhlogin{
+    
+}
+.us{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.pw{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sb{
+     margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 180px;
+}
+.rs{
+     margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 180px;
+}

@@ -28,9 +28,9 @@ public class LoginController extends HttpServlet {
         AccountDatadao AccountData =new AccountDatadao();
         AccountData.checkLogin(username, password);
         if (AccountData.checkLogin(username, password)==true) {
-            response.sendRedirect("LoginSucess.html");
+            response.sendRedirect("loginsucess.jsp");
         }else{
-            response.sendRedirect("login.html");
+            response.sendRedirect("loginfpt.jsp");
         }
     } 
 
