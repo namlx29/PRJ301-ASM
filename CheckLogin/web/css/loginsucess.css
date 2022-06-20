@@ -3,13 +3,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
 */
 /* 
-    Created on : 15-06-2022, 13:50:51
+    Created on : 20-06-2022, 19:54:24
     Author     : asus
 */
 
-
-
-.body{
+body{
     margin-left: 100px;
 }
 .first{
@@ -18,6 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 .text{
     position: absolute;
     color: #368664;
+    font-size: 38px;
 }
 .a1{
     margin-left: 70px;
@@ -39,10 +38,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 .sc{
     font-size: 20px;
-    
+
 }
 .thr{
     font-size: 15px;
 }
-
-
+.blu{
+    background-color: #6b90da;
+}
+.mid{
+    margin-left: 200px;
+}
