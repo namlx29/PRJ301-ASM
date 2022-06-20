@@ -7,6 +7,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Author     : asus
 */
 
+
+
+.body{
+    margin-left: 100px;
+}
 .first{
     overflow-x: hidden;
 }
@@ -39,3 +44,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 .thr{
     font-size: 15px;
 }
+
+
