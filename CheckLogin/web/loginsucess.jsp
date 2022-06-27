@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.mylecturer" %>
+<%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,9 +14,18 @@
         <title>ĐIỂM DANH</title>
         <link href="css/loginsucess.css" rel="stylesheet" type="text/css"/>   
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
+        <%
+            ArrayList<mylecturer> mygv =(ArrayList<mylecturer>)request.getAttribute("mygv");
+        %>
     </head>
     <body>
+        <h2 style="color: red">
+            <%
+            String name ="Vu Thi Teo";
+            out.println("xin chao "+name+" !");
+            %>
+        </h2>
+
         <div class="first">
             <div class="row">
                 <div class="col-md-4">
@@ -36,17 +47,40 @@
                 </div>
             </div>
         </div>
-        <div>
-            <ol class="breadcrumb">
-                <li>
-                    <span>
-                        <a>Home</a>&nbsp;|&nbsp;<b>View Schedule</b>
-                    </span>
-                </li>
-            </ol>
-        </div>
+
         <div class="mid">
-            <h1>Activities for <span>NamLXHE153241 (Lê Xuân Nam)</span></h1>
+            <h1 class="sl"><span>Lecturer:</span> 
+                <select id="3">
+                    <option value="first">sonnt</option>
+                    <option value="second">Lecturer1</option>
+                    <option value="third">Lecturer2</option>
+                </select>
+
+
+            </h1>
+            
+            <table>
+                <tr>
+                    <td>LecturerName</td>
+                   
+                </tr>
+            </table>
+            
+            
+            <%
+                for (mylecturer g : mygv) {
+            %>
+                <table>
+                <tr>
+                    <td><%  g.getLecturerName(); %></td>
+                    
+                </tr>
+            </table>
+            
+            <%}%>
+            
+            
+            
             <h2 class="sc">Note: These activities do not include extra-curriculum activities, such as club activities ...
                 <br>Chú thích: Các hoạt động trong bảng dưới không bao gồm hoạt động ngoại khóa, ví dụ như hoạt động câu lạc bộ ...</h2>
             <h3 class="thr">Các phòng bắt đầu bằng AL thuộc tòa nhà Alpha. VD: AL...<br>
@@ -80,20 +114,7 @@
                             <br>
                             Week
                             <select name="ctl00$mainContent$drpSelectWeek" onchange="javascript:setTimeout('__doPostBack(\'ctl00$mainContent$drpSelectWeek\',\'\')', 0)" id="ctl00_mainContent_drpSelectWeek">
-                                <option value="1">03/01 To 09/01</option>
-                                <option value="2">10/01 To 16/01</option>
-                                <option value="3">17/01 To 23/01</option>
-                                <option value="4">24/01 To 30/01</option>
-                                <option value="5">31/01 To 06/02</option>
-                                <option value="6">07/02 To 13/02</option>
-                                <option value="7">14/02 To 20/02</option>
-                                <option value="8">21/02 To 27/02</option>
-                                <option value="9">28/02 To 06/03</option>
-                                <option value="10">07/03 To 13/03</option>
-                                <option value="11">14/03 To 20/03</option>
-                                <option value="12">21/03 To 27/03</option>
-                                <option value="13">28/03 To 03/04</option>
-                                <option value="14">04/04 To 10/04</option>
+
                                 <option value="15">11/04 To 17/04</option>
                                 <option value="16">18/04 To 24/04</option>
                                 <option value="17">25/04 To 01/05</option>
@@ -118,20 +139,7 @@
                                 <option value="36">05/09 To 11/09</option>
                                 <option value="37">12/09 To 18/09</option>
                                 <option value="38">19/09 To 25/09</option>
-                                <option value="39">26/09 To 02/10</option>
-                                <option value="40">03/10 To 09/10</option>
-                                <option value="41">10/10 To 16/10</option>
-                                <option value="42">17/10 To 23/10</option>
-                                <option value="43">24/10 To 30/10</option>
-                                <option value="44">31/10 To 06/11</option>
-                                <option value="45">07/11 To 13/11</option>
-                                <option value="46">14/11 To 20/11</option>
-                                <option value="47">21/11 To 27/11</option>
-                                <option value="48">28/11 To 04/12</option>
-                                <option value="49">05/12 To 11/12</option>
-                                <option value="50">12/12 To 18/12</option>
-                                <option value="51">19/12 To 25/12</option>
-                                <option value="52">26/12 To 01/01</option>
+
 
                             </select>
                         </th>
@@ -151,29 +159,29 @@
                         <td>-</td>
                         <td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a>
                             <a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=gXpbVGLXcG5l8LKF%2bLP6yA%3d%3d&amp;SessionNo=xSlZOxVbP058dyJqVHLTPg%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/pdg-wwyu-umf" target="_blank">Meet URL</a>
-                            <a> <br>(<font color="red">Not yet</font>)<br></a></td>
+                            <a> <br><br>(<font color="Green">attended</font>)<br></a></td>
                         <td>-</td>
                         <td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a>
                             <a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=gXpbVGLXcG5l8LKF%2bLP6yA%3d%3d&amp;SessionNo=zo6W5ogDesMsd0QdzaFnUA%3d%3d" target="_blank">View Materials</a>
                             <br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/pdg-wwyu-umf" target="_blank">Meet URL</a>
                             <a> <br>(<font color="red">Not yet</font>)<br></a>
-                        </td><td>-</td><td>-</td></tr><tr><td>Slot 2 </td><td><a href="http://localhost:9999/login/check-attended.jsp">JPD123-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=6dnCI8K184zSh7%2fYYXk2ZQ%3d%3d&amp;SessionNo=otr087PrZR6f6b44meJdfw%3d%3d" target="_blank">View Materials</a>
-                            <br> at DE-C204 <a> <br>(<font color="Red">absent</font>)<br><span class="label label-success">(9:10-10:40)</span><br></a>
-                        </td><td>-</td><td><a href="http://localhost:9999/login/check-attended.jsp">JPD123-</a>
+                        </td><td>-</td><td>-</td></tr><tr><td>Slot 2 </td><td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=6dnCI8K184zSh7%2fYYXk2ZQ%3d%3d&amp;SessionNo=otr087PrZR6f6b44meJdfw%3d%3d" target="_blank">View Materials</a>
+                            <br> at DE-C204 <a> <br>(<font color="Green">attended</font>)<br><span class="label label-success">(9:10-10:40)</span><br></a>
+                        </td><td>-</td><td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a>
                             <a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=6dnCI8K184zSh7%2fYYXk2ZQ%3d%3d&amp;SessionNo=xSlZOxVbP058dyJqVHLTPg%3d%3d" target="_blank">View Materials</a>
                             <br> at DE-C204 - <a class="label label-default" href="https://meet.google.com/hdm-edfu-yoa" target="_blank">Meet URL</a>
-                            <a> <br>(<font color="red">Not yet</font>)<br></a></td><td><a href="http://localhost:9999/login/check-attended.jsp">PRJ301-</a>
+                            <a> <br>(<font color="red">Not yet</font>)<br></a></td><td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a>
                             <a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=GTJiuwxGNDd1MUm4wrFEDA%3d%3d&amp;SessionNo=xSlZOxVbP058dyJqVHLTPg%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/gkh-fjwj-hgx" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>
-                            <a href="http://localhost:9999/login/check-attended.jsp">JPD123-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=6dnCI8K184zSh7%2fYYXk2ZQ%3d%3d&amp;SessionNo=zo6W5ogDesMsd0QdzaFnUA%3d%3d" target="_blank">View Materials</a><br> at DE-C204 - <a class="label label-default" href="https://meet.google.com/hdm-edfu-yoa" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td>-</td></tr><tr><td>Slot 3 </td><td>-</td><td>
-                            <a href="http://localhost:9999/login/check-attended.jsp">PRJ301-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=GTJiuwxGNDd1MUm4wrFEDA%3d%3d&amp;SessionNo=otr087PrZR6f6b44meJdfw%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/gkh-fjwj-hgx" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td><a href="http://localhost:9999/login/check-attended.jsp">PRJ301-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=GTJiuwxGNDd1MUm4wrFEDA%3d%3d&amp;SessionNo=zo6W5ogDesMsd0QdzaFnUA%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/gkh-fjwj-hgx" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td>
-                            <a href="http://localhost:9999/login/check-attended.jsp">SWE201c-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=wv%2f6ywGLlf2HfwjoV78kkA%3d%3d&amp;SessionNo=VdF9zrq%2bg8qFJrK2mtWogw%3d%3d" target="_blank">View Materials</a><br> at BE-313 - <a class="label label-default" href="https://meet.google.com/dfb-xnrn-wqw" target="_blank">Meet URL</a><a> </a><a class="label label-primary" href="https://fu.edunext.vn?CampusCode=APHL&amp;subjectCode=SWE201c&amp;semester=Summer2022&amp;ClassName=SE1632&amp;SessionN0=3">-EduNext </a><br>(<font color="red">Not yet</font>)<br><div class="online-indicator"><span class="blink"></span></div><h3 class="online-text">Online</h3></td><td>-</td></tr><tr><td>Slot 4 </td><td>-</td><td><a href="../Schedule/ActivityDetail.aspx?id=924952">IOT102-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=MWrjFciA68ZB9nulo6TW1A%3d%3d&amp;SessionNo=x0unCCVslstpR%2bqpMNvASA%3d%3d" target="_blank">View Materials</a><br> at DE-227 - <a class="label label-default" href="https://meet.google.com/spr-jjeu-ysr" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td>
+                            <a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=6dnCI8K184zSh7%2fYYXk2ZQ%3d%3d&amp;SessionNo=zo6W5ogDesMsd0QdzaFnUA%3d%3d" target="_blank">View Materials</a><br> at DE-C204 - <a class="label label-default" href="https://meet.google.com/hdm-edfu-yoa" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td>-</td></tr><tr><td>Slot 3 </td><td>-</td><td>
+                            <a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=GTJiuwxGNDd1MUm4wrFEDA%3d%3d&amp;SessionNo=otr087PrZR6f6b44meJdfw%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/gkh-fjwj-hgx" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td><a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=GTJiuwxGNDd1MUm4wrFEDA%3d%3d&amp;SessionNo=zo6W5ogDesMsd0QdzaFnUA%3d%3d" target="_blank">View Materials</a><br> at DE-C205 - <a class="label label-default" href="https://meet.google.com/gkh-fjwj-hgx" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td><td>
+                            <a href="http://localhost:9999/login/check-attended.jsp">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=wv%2f6ywGLlf2HfwjoV78kkA%3d%3d&amp;SessionNo=VdF9zrq%2bg8qFJrK2mtWogw%3d%3d" target="_blank">View Materials</a><br> at BE-313 - <a class="label label-default" href="https://meet.google.com/dfb-xnrn-wqw" target="_blank">Meet URL</a><a> </a><a class="label label-primary" href="https://fu.edunext.vn?CampusCode=APHL&amp;subjectCode=SWE201c&amp;semester=Summer2022&amp;ClassName=SE1632&amp;SessionN0=3">-EduNext </a><br>(<font color="red">Not yet</font>)<br><div class="online-indicator"><span class="blink"></span></div><h3 class="online-text">Online</h3></td><td>-</td></tr><tr><td>Slot 4 </td><td>-</td><td><a href="../Schedule/ActivityDetail.aspx?id=924952">MAS291-</a><a class="label label-warning" href="http://flm.fpt.edu.vn/gui/role/guest/ListScheduleSyllabus?subjectCode=MWrjFciA68ZB9nulo6TW1A%3d%3d&amp;SessionNo=x0unCCVslstpR%2bqpMNvASA%3d%3d" target="_blank">View Materials</a><br> at DE-227 - <a class="label label-default" href="https://meet.google.com/spr-jjeu-ysr" target="_blank">Meet URL</a><a> <br>(<font color="red">Not yet</font>)<br></a></td><td>-</td>
                 </tbody>
             </table>
         </div>
         <div class="mid">
             <ul>
-                <li>(<font color="green">attended</font>): NamLXHE153241 had attended this activity / Lê Xuân Nam đã tham gia hoạt động này</li>
-                <li>(<font color="red">absent</font>): NamLXHE153241 had NOT attended this activity / Lê Xuân Nam đã vắng mặt buổi này</li> 
+                <li>(<font color="green">attended</font>): Student had attended this activity / Student  đã tham gia hoạt động này</li>
+                <li>(<font color="red">absent</font>): Student  had NOT attended this activity / Student  đã vắng mặt buổi này</li> 
                 <li>(-): no data was given / chưa có dữ liệu</li> 
             </ul>
         </div>

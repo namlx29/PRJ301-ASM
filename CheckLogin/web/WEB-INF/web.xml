@@ -4,9 +4,25 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>Controller.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GVDatadao</servlet-name>
+        <servlet-class>dal.LecturerDBcontext</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>lecturercontroller</servlet-name>
+        <servlet-class>Controller.lecturercontroller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GVDatadao</servlet-name>
+        <url-pattern>/GVDatadao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>lecturercontroller</servlet-name>
+        <url-pattern>/lecturercontroller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -15,7 +31,5 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>loginfpt.jsp</welcome-file>
-            
     </welcome-file-list>
-        
 </web-app>

@@ -5,33 +5,36 @@
 
 package Controller;
 
-import dal.AccountDatadao;
+import dal.LecturerDBcontext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import model.mylecturer;
 
 /**
  *
  * @author asus
  */
-public class LoginController extends HttpServlet {
+public class lecturercontroller extends HttpServlet {
    
-    
+    /** 
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String username =request.getParameter("userID-Name");
-        String password=request.getParameter("password-Name");
-        AccountDatadao AccountData =new AccountDatadao();
-        AccountData.checkLogin(username, password);
-        if (AccountData.checkLogin(username, password)==true) {
-            response.sendRedirect("loginsucess.jsp");
-        }else{
-            response.sendRedirect("loginfpt.jsp");
-        }
+        LecturerDBcontext db =new LecturerDBcontext();
+        ArrayList<mylecturer> mygv = db.getmylecturers();
+        request.setAttribute("mygv", mygv);
+        request.getRequestDispatcher("loginsucess.jsp").forward(request, response);
+        
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
